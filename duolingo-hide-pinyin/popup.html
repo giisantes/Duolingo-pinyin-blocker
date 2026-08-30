@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      width: 220px;
+      padding: 14px;
+      background: #131f24;
+      color: #eee;
+    }
+    h1 {
+      font-size: 14px;
+      margin: 0 0 10px;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    p {
+      font-size: 11px;
+      color: #9aa;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <h1>Duolingo Pinyin Hider</h1>
+  <label>
+    <input type="checkbox" id="showPinyin" />
+    Show pinyin
+  </label>
+  <p>Hold <b>Alt</b> while on a lesson to peek at pinyin temporarily.<br />
+     Shortcut: <b>Ctrl+Shift+P</b> to toggle.</p>
+  <script src="popup.js"></script>
+</body>
+</html>

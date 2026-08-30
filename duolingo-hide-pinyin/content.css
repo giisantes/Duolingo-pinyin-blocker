@@ -1,0 +1,5 @@
+/* Hidden by default. Layout space is preserved with visibility:hidden
+   so tiles/word-bank items don't jump around when pinyin disappears. */
+html:not(.dhp-show-pinyin):not(.dhp-peek) ruby rt {
+  visibility: hidden !important;
+}

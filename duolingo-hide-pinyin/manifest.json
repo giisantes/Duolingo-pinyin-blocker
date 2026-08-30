@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Duolingo Pinyin Hider",
+  "version": "1.0",
+  "description": "Hides pinyin on Duolingo Chinese exercises so you can practice reading characters only. Click the toolbar icon or press the shortcut to toggle it on/off.",
+  "permissions": ["storage"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "duolingo-pinyin-hider@example.com",
+      "strict_min_version": "109.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.duolingo.com/*"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "commands": {
+    "toggle-pinyin": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P",
+        "mac": "Command+Shift+P"
+      },
+      "description": "Toggle pinyin visibility"
+    }
+  }
+}
